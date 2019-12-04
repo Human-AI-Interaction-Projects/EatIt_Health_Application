@@ -8,4 +8,14 @@ The ease of access to many products have revolutionized the way consumers approa
 
 # How do we "Eat It!"?
 
-# Design
+# Features
+
+# Framework 
+### Neural Network Architecture
+Our neural network was a 
+
+### TensorFlowLite Image Classification
+The TensorFlowLite image classification skeleton was utilized within our application. Our model and other features were implemented in place of the features within the skeleton. 
+
+# API Reference
+The Nutrionix API was utilized within our application to return the calorie value of each meal that the user enters into their log. This allows for flexibility within our model including when the user inputs a label for a meal that was not 
