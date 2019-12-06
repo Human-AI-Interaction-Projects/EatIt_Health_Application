@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tflite.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="91dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="130dp"
+            android:src="@drawable/darklogo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="110dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Your Dietary Restrictions:"
+            android:textAlignment="center"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="190dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="sans-serif-black"
+            android:text="\n YUMMY!"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="24sp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            app:srcCompat="@android:drawable/ic_menu_camera" />
+
+        <TextView
+            android:id="@+id/caloriesheader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Total Calories:"
+            android:textAlignment="center"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:id="@+id/progressBar"
+            android:layout_width="88dp"
+            android:layout_height="117dp"
+            android:layout_below="@id/caloriesheader"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="150dp"
+            android:src="@drawable/heartcalories" />
+
+        <TextView
+            android:id="@+id/caloriescount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/caloriesheader"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="240dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Total"
+            android:textAlignment="center"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/caloriespercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/caloriesheader"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="240dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Percent"
+            android:textAlignment="center"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/foodeaten"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/caloriespercent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Food History:"
+            android:textAlignment="center"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/foodhistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/foodeaten"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="-10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="sans-serif-black"
+            android:text="\nNothing..... YET!"
+            android:textAlignment="textStart"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/foodhistory"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="sans-serif-black"
+            android:textAlignment="textStart"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/caloriesperfood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/foodeaten"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="290dp"
+            android:layout_marginTop="-10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="sans-serif-black"
+            android:text="\n410"
+            android:textAlignment="textStart"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="24sp" />
+
+
+    </RelativeLayout>
+</ScrollView>

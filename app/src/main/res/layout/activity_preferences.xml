@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lightgreenbackground"
+    android:paddingLeft="0dp"
+    android:paddingTop="0dp"
+    android:paddingRight="0dp"
+    android:paddingBottom="0dp">
+
+
+    <TextView
+        android:id="@+id/welcomehome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="99dp"
+        android:fontFamily="@font/heebo_bold"
+        android:text="FoodFacts®"
+        android:textAlignment="center"
+        android:textColor="#DD000000" />
+
+
+    <ImageView
+        android:layout_width="165dp"
+        android:layout_height="456dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-5dp"
+        android:src="@drawable/appletree" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/heebo_bold"
+        android:text="Do you have any dietary restrictions? Please check all boxes that apply."
+        android:textAlignment="center"
+        android:textColor="#DD000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <CheckBox
+        android:id="@+id/vegan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="125dp"
+        android:onClick="onCheckboxClicked"
+        android:text="Vegan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question"
+        app:layout_constraintVertical_bias="0.203" />
+
+    <CheckBox
+        android:id="@+id/vegetarian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="100dp"
+        android:onClick="onCheckboxClicked"
+        android:text="Vegetarian"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vegan"
+        app:layout_constraintVertical_bias="0.057" />
+
+    <CheckBox
+        android:id="@+id/glutenfree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="175dp"
+        android:onClick="onCheckboxClicked"
+        android:text="Gluten-Free"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <CheckBox
+        android:id="@+id/sugarfree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="200dp"
+        android:onClick="onCheckboxClicked"
+        android:text="Sugar-Free" />
+
+    <CheckBox
+        android:id="@+id/nopork"
+        android:layout_width="164dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="onCheckboxClicked"
+        android:text="No Pork" />
+
+    <CheckBox
+        android:id="@+id/nobeef"
+        android:layout_width="171dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="9dp"
+        android:onClick="onCheckboxClicked"
+        android:text="No Beef" />
+
+    <CheckBox
+        android:id="@+id/noseafood"
+        android:layout_width="163dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="17dp"
+        android:onClick="onCheckboxClicked"
+        android:text="No Seafood" />
+
+    <CheckBox
+        android:id="@+id/nutallergy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="150dp"
+        android:onClick="onCheckboxClicked"
+        android:text="Nut Allergy"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="152dp" />
+
+
+    <CheckBox
+        android:id="@+id/lactoseintolerant"
+        android:layout_width="159dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="200dp"
+        android:onClick="onCheckboxClicked"
+        android:text="Lactose Intolerant"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="168dp" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="start"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="5dp"
+        android:enabled="true"
+        android:fontFamily="@font/heebo_bold"
+        android:text="Ready"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/noegg"
+        android:layout_width="157dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="175dp"
+        android:onClick="onCheckboxClicked"
+        android:text="No Egg" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="wrap_content"
+        android:layout_height="500dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginBottom="100dp"
+        android:src="@drawable/broccolimunching" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="330dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/groundsideview" />
+</RelativeLayout>
