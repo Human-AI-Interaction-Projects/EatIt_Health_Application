@@ -1,7 +1,7 @@
 # "Eat It!" a Food Identifier App
 Android application with TensorFlow Lite incorporation to identify foods and track nutrition facts
 
-By Michael Kim and Vivek Jain
+<u>By Michael Kim and Vivek Jain</u>
 
 # A Holistic Approach to Health and Nutrition
 The ease of access to many products have revolutionized the way consumers approach their daily needs. For example, the rise of apps such as GrubHub, Uber Eats, and Postmates have created a networking system that allows for virtually any food to easily arrive at your doorstep. The issue of maintaining a healthy conscious then arises with so much accessibility to restaurants and meals. Few people are aware of what goes into those meals and keeping track of everything can become a hassle. Our application "Eat It!" makes it just as easy to track those meals as it is to order them. Simply give us your dietary preferences or restrictions and hover the camera over your meal. Ingredients, calories, what to eat, and what not to eat all at your fingertips. We make it easy to choose the right option!
@@ -109,8 +109,12 @@ class RetrieveFeedTask extends AsyncTask<String, Void, String> {
 
 Within the TensorFlowLite Image Classification skeleton, the classifier and camera activity classes were adjusted to account for the features of our project. This includes cycling through the output of our classifier model to ensure dietary restrictions were met and the function of the eat-it button.
 
+# Demo
+<html>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=ZLfYjSxp2hA&feature=youtu.be" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></html>
+
 # Overview
-Overall, the application was able to perform its function of demonstrating a platform for human-computer interaction. The application alerts users of ingredients that do not coincide with their dietary restrictions, adequately classify across the 13 different meals, and allow the user to relabel/correct the incoming classification. An improvement that could be implemented into our design is the utilization of a cloud model. This would allow for much more flexibility in terms of the number of possible classifications, while also allowing for the user to interactively correct the model. 
+Overall, the application was able to perform its function of demonstrating a platform for human-computer interaction. The application alerts users of ingredients that do not coincide with their dietary restrictions, adequately classifies across the 13 different meals, and allows the user to relabel/correct the incoming classification. An improvement that could be implemented into our design is the utilization of a cloud model. This would allow for much more flexibility in terms of the number of possible classifications while also allowing for the user to interactively correct the model. 
 
 Additional features to implement include:
 - Gallery option to save images
