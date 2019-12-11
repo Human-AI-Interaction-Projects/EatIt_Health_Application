@@ -111,7 +111,7 @@ Within the TensorFlowLite Image Classification skeleton, the classifier and came
 
 # Demo
 
-[![Application](https://scontent-lax3-2.xx.fbcdn.net/v/t1.15752-9/78686190_918895351839104_7791116244547010560_n.png?_nc_cat=107&_nc_ohc=-6kq3RIw_MMAQkWOpEWuZB3GOp9Qg0jZlizUbtNtTIhYRDmb0WlwukcdQ&_nc_ht=scontent-lax3-2.xx&oh=54b7e0e6faf6b4115eecdcd36bc4d971&oe=5E695537)](https://www.youtube.com/watch?v=ZLfYjSxp2hA&feature=youtu.be "Eat It!")
+[![Application](https://scontent-lax3-2.xx.fbcdn.net/v/t1.15752-9/79975882_2172900119679194_7609042573595770880_n.png?_nc_cat=106&_nc_ohc=dno8lJuBfZQAQlu0pzFWQfY6aQYEuWnBHU5vK_-j-zurnZURA2Qfzk3QA&_nc_ht=scontent-lax3-2.xx&oh=b997a09d0cae2807308b4e5bfdcb7572&oe=5E8B6555)](https://www.youtube.com/watch?v=ZLfYjSxp2hA&feature=youtu.be "Eat It!")
 
 # Overview
 Overall, the application was able to perform its function of demonstrating a platform for human-computer interaction. The application alerts users of ingredients that do not coincide with their dietary restrictions, adequately classifies across the 13 different meals, and allows the user to relabel/correct the incoming classification. An improvement that could be implemented into our design is the utilization of a cloud model. This would allow for much more flexibility in terms of the number of possible classifications while also allowing for the user to interactively correct the model. 
