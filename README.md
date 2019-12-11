@@ -30,6 +30,14 @@ Our application was created with Android Studios. The classes include:
 - PreferencesActivity.java: the opening activity to input your dietary restrictions/preferences
 - RetrieveFeedTask.java: AsyncTask to retrieve calories for food labels using the Nutrionix API 
 
+Within the TensorFlowLite Image Classification skeleton, the classifier and camera activity classes were adjusted to account for the features of our project. This includes cycling through the output of our classifier model to ensure dietary restrictions were met and the function of the eat-it button.
+
+# Overview
+Overall, the application was able to perform its function of enabling human-computer interaction. The application alerts users of ingredients that do not coincide with their dietary restrictions, adequately classify across the 13 different meals, and allow the user to relabel/correct the incoming classification. An improvement that could be implemented into our design is the utilization of a cloud model. This would allow for much more flexibility in terms of a larger range of meals to classify along with classification at a higher accuracy./
+Additional features to implement include:
+- Gallery option to save images
+- 
+
 # References
 The Nutrionix API was utilized within our application to return the calorie value of each meal that the user enters into their log. This allows for flexibility within our model including when the user inputs a label for a meal that was not trained by our model. 
 
