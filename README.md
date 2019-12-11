@@ -36,7 +36,9 @@ Within the TensorFlowLite Image Classification skeleton, the classifier and came
 Overall, the application was able to perform its function of enabling human-computer interaction. The application alerts users of ingredients that do not coincide with their dietary restrictions, adequately classify across the 13 different meals, and allow the user to relabel/correct the incoming classification. An improvement that could be implemented into our design is the utilization of a cloud model. This would allow for much more flexibility in terms of a larger range of meals to classify along with classification at a higher accuracy./
 Additional features to implement include:
 - Gallery option to save images
-- 
+- More accurate calorie count for meals
+- Option to add multiple servings of a meal
+- Model that can be retrained through a user's label correction
 
 # References
 The Nutrionix API was utilized within our application to return the calorie value of each meal that the user enters into their log. This allows for flexibility within our model including when the user inputs a label for a meal that was not trained by our model. 
