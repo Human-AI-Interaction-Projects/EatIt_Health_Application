@@ -22,7 +22,39 @@ The features of our application include:
 - Alerts when a meal contains an undesired ingredient.
 # Framework 
 ### Neural Network Architecture
-Our neural network was a 
+For the project our key learning lies in the image classification to determine the food that is being clicked. For this we use the Inception ResNet model a Convolution Neural Network to classify the image, and predict the dish. The model was chosen as the tradeoff between accuracy and time to evaluate in order to keep latency minimum but still maintain a guaranteed performance. For our proof of concept demo, we used the Food – 101 dataset which has 101 food classes with 1000 images in each but only 250 manually labelled. The dataset has noisy images, in order to reduce this, we used 300 best images (250 labelled and 50 random) and used only 13 classes:
+
+1.	Chocolate cake
+2.	French Fries
+3.	Frozen Yogurt
+4.	Grilled Cheese Sandwich
+5.	Hamburger
+6.	Ice Cream
+7.	Lasagna
+8.	Macaroni and Cheese
+9.	Nachos
+10.	Omelet
+11.	Pancakes
+12.	Pizza
+13.	Tacos
+
+The data was then resized using the PILLOW to a size of 100x100x3 as the color in the image mattered, the color channels were not flattened and also data was normalized to 0 and 1. A 10% test data was created from random shuffling and the model was trained by changing the final layers. A Global Pooling layer and final dense layer with 13 neurons and Softmax loss was added. The best validation accuracy weights were saved as ‘.hdf5’ file with 10% validation data during training. 
+
+<html>
+    <center><img src = "https://scontent-lax3-1.xx.fbcdn.net/v/t1.15752-9/78987865_816945005438013_5952314193918033920_n.png?_nc_cat=103&_nc_ohc=HAgIzZCg-BgAQmalmHfPNEqBgkTILffRC9WlsOuPpxbObCoDWSlgTZHhQ&_nc_ht=scontent-lax3-1.xx&oh=705781d51ad32d20d86d6a3da9cc37f2&oe=5E6A18DF"></center>
+    </html>
+
+For the implementation, TensorFlow and Keras are used to generate the HDF5 weights file. Post this we use TensorFlowLite (TFLite) to convert the model to ‘.tflite’ model file that is used in the android application for real time classification. The conversion is done using the following notebook: https://colab.research.google.com/drive/1qM73rGwizMZeBIPewYNv8ET9z5LHedOh.
+
+
+The final TFLite model is used as the basis in classifying the images in real time android application. 
+
+
+The accuracy achieved on test data in the original model is 74.54% and 95.56% for training data respectively. This accuracy decreases when the model is quantized and thus there is a huge scope of further improvement in this part. 
+
+<html>
+    <center><img src = "https://scontent-lax3-1.xx.fbcdn.net/v/t1.15752-9/79299940_443829566306537_3591004070078316544_n.png?_nc_cat=108&_nc_ohc=v0U81PG9XcgAQkxB0FOTqXYPjjYU5EgQpf7zus4CJOdv3NtDdOQZM-vqQ&_nc_ht=scontent-lax3-1.xx&oh=6d8cf8afe40877022fe6db7f109ed2a9&oe=5E6644EE"></center>
+    </html>
 
 ### TensorFlowLite Image Classification
 The TensorFlowLite image classification skeleton was utilized within our application. Our model and other features were implemented in place of the features within the skeleton. Additionally, extra classes were created to account for the additional functions of our application. 
@@ -78,7 +110,7 @@ class RetrieveFeedTask extends AsyncTask<String, Void, String> {
 Within the TensorFlowLite Image Classification skeleton, the classifier and camera activity classes were adjusted to account for the features of our project. This includes cycling through the output of our classifier model to ensure dietary restrictions were met and the function of the eat-it button.
 
 # Overview
-Overall, the application was able to perform its function of demonstrating a platform for human-computer interaction. The application alerts users of ingredients that do not coincide with their dietary restrictions, adequately classify across the 13 different meals, and allow the user to relabel/correct the incoming classification. An improvement that could be implemented into our design is the utilization of a cloud model. This would allow for much more flexibility in terms of a larger range of meals to classify along with classification at a higher accuracy.
+Overall, the application was able to perform its function of demonstrating a platform for human-computer interaction. The application alerts users of ingredients that do not coincide with their dietary restrictions, adequately classify across the 13 different meals, and allow the user to relabel/correct the incoming classification. An improvement that could be implemented into our design is the utilization of a cloud model. This would allow for much more flexibility in terms of the number of possible classifications, while also allowing for the user to interactively correct the model. 
 
 Additional features to implement include:
 - Gallery option to save images
@@ -94,7 +126,9 @@ The Nutrionix API was utilized within our application to return the calorie valu
 The TensorFlowLite image classification skeleton was utilized within our application. Our model and other features were implemented in place of the features within the skeleton. 
 
 - TensorFlowLite Image Classification: https://github.com/tensorflow/examples
+- TensorFlowLite Guide: https://www.tensorflow.org/lite/guide/hosted_models
 
-The Keras Food 101 image dataset was utilized for our neural network training set. 
+The Food 101 image dataset was utilized for our neural network training set. 
 
-- Keras Food 101 Image Dataset: https://github.com/stratospark/food-101-keras
+- Food 101 Image Dataset: https://www.vision.ee.ethz.ch/datasets_extra/food-101/
+
