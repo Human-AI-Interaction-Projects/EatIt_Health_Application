@@ -110,7 +110,7 @@ class RetrieveFeedTask extends AsyncTask<String, Void, String> {
 Within the TensorFlowLite Image Classification skeleton, the classifier and camera activity classes were adjusted to account for the features of our project. This includes cycling through the output of our classifier model to ensure dietary restrictions were met and the function of the eat-it button.
 
 # Demo
-
+Click below for link: 
 [![Application](https://scontent-lax3-2.xx.fbcdn.net/v/t1.15752-9/79975882_2172900119679194_7609042573595770880_n.png?_nc_cat=106&_nc_ohc=dno8lJuBfZQAQlu0pzFWQfY6aQYEuWnBHU5vK_-j-zurnZURA2Qfzk3QA&_nc_ht=scontent-lax3-2.xx&oh=b997a09d0cae2807308b4e5bfdcb7572&oe=5E8B6555)](https://www.youtube.com/watch?v=ZLfYjSxp2hA&feature=youtu.be "Eat It!")
 
 # Overview
