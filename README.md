@@ -110,8 +110,8 @@ class RetrieveFeedTask extends AsyncTask<String, Void, String> {
 Within the TensorFlowLite Image Classification skeleton, the classifier and camera activity classes were adjusted to account for the features of our project. This includes cycling through the output of our classifier model to ensure dietary restrictions were met and the function of the eat-it button.
 
 # Demo
-<html>
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=ZLfYjSxp2hA&feature=youtu.be" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></html>
+
+[![Application](https://scontent-lax3-2.xx.fbcdn.net/v/t1.15752-9/78686190_918895351839104_7791116244547010560_n.png?_nc_cat=107&_nc_ohc=-6kq3RIw_MMAQkWOpEWuZB3GOp9Qg0jZlizUbtNtTIhYRDmb0WlwukcdQ&_nc_ht=scontent-lax3-2.xx&oh=54b7e0e6faf6b4115eecdcd36bc4d971&oe=5E695537)](https://www.youtube.com/watch?v=ZLfYjSxp2hA&feature=youtu.be "Eat It!")
 
 # Overview
 Overall, the application was able to perform its function of demonstrating a platform for human-computer interaction. The application alerts users of ingredients that do not coincide with their dietary restrictions, adequately classifies across the 13 different meals, and allows the user to relabel/correct the incoming classification. An improvement that could be implemented into our design is the utilization of a cloud model. This would allow for much more flexibility in terms of the number of possible classifications while also allowing for the user to interactively correct the model. 
